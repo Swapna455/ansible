@@ -1,0 +1,16 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars: # play level variables
+    COURSE: "DevOps with Aws"
+    DURATION: 120hRS
+    TRAINER: Sivakumar
+  tasks:
+  - name: print the variable
+    vars: # task level variables
+      COURSE: Ansible
+    debug:
+      msg: "course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
+  - name: print the variables1
+    debug:
+      msg: "course is {{ COURSE }}, Duration is {{ DURATION}},  Trainer is {{ TRAINER }}"
