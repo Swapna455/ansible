@@ -33,5 +33,5 @@
       msg: "{{ ec2_info }}"
   - name: print private IP addresses
     debug:
-      msg: "{{ item.item}}: {{ item.instances[0].private_ip_address}}"
+      msg: "{{ item.item }}: {{ item.instances[0].private_ip_address}}"
     loop: "{{ ec2_info_results }}"
